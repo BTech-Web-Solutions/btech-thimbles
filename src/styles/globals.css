@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2d2d2d;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +23,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #464646;
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-perestop {
+  width: 100%;
+  height: calc(100vh - 180px);
+
+  margin-bottom: 10px;
+  background-color: #323637;
+  border-radius: 20px;
+  border: 3px solid #e84029;
+  box-shadow: 0 0 14px #ff5733;
 }
