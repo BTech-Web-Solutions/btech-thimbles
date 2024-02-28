@@ -112,6 +112,7 @@ export default function Home() {
             isRunning === false ? "bg-[#309009]" : "bg-[#af7d20] text-zinc-400"
           } w-[100%] p-2 text-2xl font-medium rounded-xl flex justify-center items-center gap-2 cursor-pointer`}
           onClick={beforeRun}
+          disabled={isRunning || isAnalyzing ? true : false}
         >
           {isRunning
             ? `${counter} ${counter === 1 ? "segundo" : "segundos"}`
